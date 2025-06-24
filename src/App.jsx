@@ -19,13 +19,13 @@ function App() {
     <Router>
       <Routes>
         {/* Public routes */}
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        {/* <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} /> */}
 
         {/* Protected layout and routes */}
-        <Route element={<ProtectedRoute />}>
+        {/* <Route element={<ProtectedRoute />}> */}
           <Route element={<Layout />}>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/community" element={<Community />} />
             <Route path="/laws" element={<Laws />} />
             <Route path="/contacts" element={<Contact />} />
@@ -33,8 +33,10 @@ function App() {
             <Route path="/join" element={<Join />} />
             <Route path="/location" element={<LocationPage />} />
             <Route path="/sos" element={<SosButton />} />
+            {/* <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />  */}
           </Route>
-        </Route>
+        {/* </Route> */}
       </Routes>
     </Router>
   );

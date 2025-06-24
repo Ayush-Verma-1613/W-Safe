@@ -9,25 +9,25 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // Clear token
+    // localStorage.removeItem("token"); // Clear token
     navigate("/"); // Redirect to login
   };
 
   const NavLinks = () => (
     <>
-      <li><Link to="/home" onClick={toggleMenu}>Home</Link></li>
+      <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
       <li><Link to="/community" onClick={toggleMenu}>Community</Link></li>
       <li><Link to="/laws" onClick={toggleMenu}>Laws</Link></li>
       <li><Link to="/contacts" onClick={toggleMenu}>Contacts</Link></li>
       <li><Link to="/location" onClick={toggleMenu}>Location</Link></li>
       <li><Link to="/sos" onClick={toggleMenu}>SOS</Link></li>
       <li>
-        <button
+        {/* <button
           onClick={handleLogout}
           className="bg-white text-pink-600 px-3 py-1 rounded hover:bg-pink-100 transition"
         >
           Logout
-        </button>
+        </button> */}
       </li>
     </>
   );
